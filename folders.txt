@@ -1,0 +1,17 @@
+Here the projects are done for the different uses
+creating this project in cmd as administartor:"cd (folder link where we want to create the project)"
+        "npm create vite@latest project-name" -> react ->Javascript -> code . (used to open the project in vscode)
+        "npm install","npm install react-router-dom@6 (to install the react router)"
+        "npm install -D tailwindcss postcss autoprefixer(to install taiwind css)"
+        "npx tailwindcss init -p( creates two configuration files:tailwind.config.js, postcss.config.js)"
+
+redux: This redux folder is about understanding the concept of Context API and little redux on creating store, and how it works
+        "npm i @reduxjs/toolkit","npm i react-redux" => {to install the redux toolkit}
+
+todo: This todo is created to understand the concepts of redux, creating slices and store
+        "npm i @reduxjs/toolkit","npm i react-redux" => {to install the redux toolkit}
+
+testing: testing is react-app created to know about testing and it working using .test.js page.
+         It doesn't use vite, it uses the command of "npx create-react-app testing"
+         "npm i", "npm i web-vitals --save-dev[if we get any vital error we should do this]"
+         "npm run start[to run the file]","npm install @testing-library/react","npm test"
