@@ -30,8 +30,6 @@ function App() {
     import('./Components/Contact').then((module) => setContact(() =>module.default));
   }
 
-
-
   return (
     <>
       <Router>
