@@ -35,6 +35,13 @@ function App() {
   //   import('./Components/Contact').then((module) => setContact(() =>module.default));
   // }
 
+  //fallback
+  // const fallBackHome = () => {
+  //   return(
+  //     <div>loading..</div>
+  //   )
+  // }
+
   return (
     <>
       <Router>
@@ -51,7 +58,7 @@ function App() {
               <li><Link to="/contact" >Contact</Link></li>
             </ul>
           </nav>
-          <Suspense fallback={<div>Loading..</div>}>
+          <Suspense fallback={<div>Loading..</div>}> {/* fallBackHome given this while fallback*/} 
             <Routes>
               <Route 
                 path="/"
