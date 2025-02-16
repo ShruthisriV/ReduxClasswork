@@ -6,6 +6,9 @@ import Navbar from './Components/Navbar';
 import { useEffect, useState, Suspense, lazy } from 'react';
 import UseMemo from './Components/UseMemo';
 import UseCallback from './Components/UseCallback';
+import UseRefHook from './Components/UseRefHook';
+import Stopwatch from './Components/Stopwatch';
+
 // import Home from './Components/Home';
 // import About from './Components/About';
 // import Contact from './Components/Contact';
@@ -83,7 +86,9 @@ function App() {
       // </Router>
 
       // <UseMemo/>
-      <UseCallback/>
+      // <UseCallback/>
+      // <UseRefHook/>
+      <Stopwatch/>
   );
 }
 

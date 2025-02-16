@@ -8,7 +8,7 @@ import React, { useCallback, useMemo, useState } from 'react'
 // };
 function UseCallback({value}) {
     const [items, setItems] = useState(["Item1", "Item2", "Item3"]);
-    const compValue = useMemo(() => someExpensiveComputation(),[]);
+    // const compValue = useMemo(() => someExpensiveComputation(),[]);
     //1) when to use dependency array in Usecallback?? Ans: when result is time taking process
     const removeItem = useCallback((itemToBeRemoved) => {
         console.log(itemToBeRemoved);
@@ -19,8 +19,7 @@ function UseCallback({value}) {
     //     //latest state value
         setItems((prevItems) =>  prevItems.filter((item) => item != itemToBeRemoved))
         console.log(value);
-    },[value, compValue]);
-
+    },[value, /*compValue*/]);
     // const removeItem = useCallback((itemToBeRemoved) => {
     //     console.log(itemToBeRemoved);
     //     let updatedItems = items.filter((item) => item != itemToBeRemoved);
