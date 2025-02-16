@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import { useEffect, useState, Suspense, lazy } from 'react';
 import UseMemo from './Components/UseMemo';
+import UseCallback from './Components/UseCallback';
 // import Home from './Components/Home';
 // import About from './Components/About';
 // import Contact from './Components/Contact';
@@ -80,7 +81,9 @@ function App() {
       //     </Suspense>
       //   </div>
       // </Router>
-      <UseMemo/>
+
+      // <UseMemo/>
+      <UseCallback/>
   );
 }
 
