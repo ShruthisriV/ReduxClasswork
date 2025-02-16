@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 
 function Stopwatch() {
     const [time, setTime] = useState(0);
@@ -12,7 +12,7 @@ function Stopwatch() {
             
             }, []);
 
-    const startTimer = () => {
+    const startTimer = useCallback(() => {
         if(!isRunning){
             setIsRunning(true);
             intervalRef.current = setInterval(() => {
@@ -20,22 +20,22 @@ function Stopwatch() {
             },1000); 
         }
         
-    }
+    }, [isRunning]);
 
-    const stopTimer = () => {
+    const stopTimer = useCallback(() => {
         if(isRunning){
             setIsRunning(false);
             clearInterval(intervalRef.current);
         };
-    }
+    },[isRunning]);
 
-    const resetTimer = () => {
+    const resetTimer = useCallback(() => {
         if(isRunning){
             setIsRunning(false);
             clearInterval(intervalRef.current);
             setTime(0);
         };
-    }
+    },[isRunning]);
 
     const formatTime = (timeInSeconds) => {
         const getHours = `0${Math.floor(timeInSeconds/3600)}`.slice(-2);
