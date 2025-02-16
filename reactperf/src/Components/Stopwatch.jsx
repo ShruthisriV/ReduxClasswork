@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 
-function Stopwatch() {
+const Stopwatch = React.memo(() => {
     const [time, setTime] = useState(0);
     const [isRunning, setIsRunning] = useState(true);
 
@@ -55,6 +55,6 @@ function Stopwatch() {
         <button onClick={resetTimer}>Reset</button>
     </div>
   )
-}
+})
 
 export default Stopwatch
