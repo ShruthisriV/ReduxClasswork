@@ -4,14 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import UseRefHook from './poc/UseRefHook';
 import Stopwatch from './Components/Stopwatch'
+import ImageCarousel from './Components/ImageCarousel';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <UseRefHook/> */}
-      <Stopwatch/>
+      <ImageCarousel/>
     </>
   )
 }
