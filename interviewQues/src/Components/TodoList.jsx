@@ -36,7 +36,7 @@ export default class TodoList extends Component {
         console.log("I am called before updating a state");
         return true;
     }
-
+    
     //called everytime whenever the states mentioned in dependency array is changed
     // useEffect(() => {
 
