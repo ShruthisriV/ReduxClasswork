@@ -6,30 +6,31 @@ import ImageCarousel from './Components/ImageCarousel';
 import Modal from './Components/Modal';
 import useVisibility from './useVisibility';
 import ProgressBar from './Components/ProgressBar/ProgressBar';
+import TypeAhead from './Components/TypeAhead/TypeAhead';
 
 function App() {
   //created to use useVisibility
-  const {isVisible, hide, show, toggle} = useVisibility(true);
+  // const {isVisible, hide, show, toggle} = useVisibility(true);
   
-  //Progress bar
-  const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if(prev>=100){
-          clearInterval(interval)
-          alert("Data Loaded");
-          return 100;
-        }
-        return prev+1;
-      })
-    }, 100);
+  // //Progress bar
+  // const [progress, setProgress] = useState(0);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setProgress((prev) => {
+  //       if(prev==100){
+  //         clearInterval(interval)
+  //         alert("Data Loaded");
+  //         return 100;
+  //       }
+  //       return prev+1;
+  //     })
+  //   }, 100);
 
-    return () => {
-      clearInterval(interval);
-    };
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
 
-  },[]);
+  // },[]);
 
   return (
     <>
@@ -41,8 +42,8 @@ function App() {
         <button onClick={toggle}>Toggle Modal</button>
         <Modal hide={hide} isVisible={isVisible}></Modal> */}
 
-        <ProgressBar width={progress} text={`Data Loaded: ${progress}%`}/>
-       
+        {/* <ProgressBar width={progress} text={`${progress}%`}/> */}
+        <TypeAhead/>
     </>
   )
 }
